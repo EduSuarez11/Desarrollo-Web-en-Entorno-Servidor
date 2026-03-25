@@ -2,13 +2,15 @@ package es.daw.extra_estudiantes_mvc.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "roles")
-@Data
+//@Data
+@Getter
 @AllArgsConstructor
 public class Role {
     @Id

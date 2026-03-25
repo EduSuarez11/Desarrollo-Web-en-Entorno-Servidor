@@ -2,6 +2,8 @@ package es.daw.extra_estudiantes_mvc.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -12,7 +14,8 @@ import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "users")
-@Data
+//@Data
+@Getter @Setter
 @AllArgsConstructor
 public class User implements UserDetails {
     @Id

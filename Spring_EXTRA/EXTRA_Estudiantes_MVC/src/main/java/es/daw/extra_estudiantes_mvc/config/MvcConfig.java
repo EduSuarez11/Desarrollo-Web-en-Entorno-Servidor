@@ -9,12 +9,14 @@ public class MvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
+        // Para endpoints que solo necesitan mostrar una vista
         registry.addViewController("/").setViewName("home");
         registry.addViewController("/home").setViewName("home");
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/error").setViewName("error");
-
-        // lunes
         registry.addViewController("/invitado").setViewName("info");
+        registry.addViewController("/principal").setViewName("principal");
+        registry.addViewController("/filtrar-estudiantes").setViewName("estudiantes/filtro");
+        registry.addViewController("/ciclos-informatica").setViewName("ciclos-info");
     }
 }
